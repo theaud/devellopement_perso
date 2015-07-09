@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1435323042 source:c:\users\jerome\documents\developpement2\developpement perso\devellopement_perso\main.cpp
+	<cstdlib>
+	<iostream>
+	"complexe.h"
+
+1435323438 c:\users\jerome\documents\developpement2\developpement perso\devellopement_perso\complexe.h
+	<cstdlib>
+	<iostream>
+
+1435323241 source:c:\users\jerome\documents\developpement2\developpement perso\devellopement_perso\complexe.cpp
+	<iostream>
+	"complexe.h"
+
+1435423228 source:c:\utile\developpement perso\devellopement_perso\main.cpp
+	<cstdlib>
+	<iostream>
+	"complexe.h"
+
+1435439925 c:\utile\developpement perso\devellopement_perso\complexe.h
+	<cstdlib>
+	<iostream>
+
+1435439925 source:c:\utile\developpement perso\devellopement_perso\complexe.cpp
+	<iostream>
+	"complexe.h"
+
