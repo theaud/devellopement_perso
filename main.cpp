@@ -1,21 +1,9 @@
-//include c
-#include <stdio.h>
-#include <stdlib.h>
-//include c++
-#include <cstdlib>
-#include <iostream>
-
-using namespace std;
+#include "include.h"
 
 
 
-#define TAILLE_MAX 200
-#include "complexe.h"
-#define PI 3.1415926535897932384626433832795
 
-double racine_carre(double nombre);
-double cosinus(double x);
-double modulo(double x, double diviseur);
+
 /*******************************************************************************************************************/
 /*--------------------------------------------------*/
 /*        Fonction de Lecture et ecriture           */
@@ -53,19 +41,17 @@ double modulo(double x, double diviseur);
 double exponentiel(double entre);
 /*--------------------------------------------------*/
 
-
-
 char* convertir_entier_chaine(int entrer);
-
-
 
 
 int main(int argc, char *argv[])
 {
     Complexe a,b;
 
+    b(1.1,1.11);
+
     a.setComplexe(1.0,1.0);
-    b(1.0,1.0);
+
     Complexe c(a);
     Complexe d=a;
 
@@ -81,12 +67,16 @@ int main(int argc, char *argv[])
     cout<<"dd="<<(double)d<<endl;
 
 
+
+
+
     system("PAUSE");
+
+
     return EXIT_SUCCESS;
 }
 
-
-
+/*
 double racine_carre(double nombre)
 {
 int i;
@@ -128,7 +118,7 @@ double modulo(double x, double diviseur)
 sommeultat=x-diviseur*((long)(x/diviseur));
 	return sommeultat;
 }
-/***********************************************************************************************************/
+
 int lecture_entier(FILE * fichier)
 {int retour;
 
@@ -274,7 +264,6 @@ int longueur_entier(int i)
 char* convertir_entier_chaine(int entrer)
 {
     char* sortie;
-    char tab[100];
     int longueur=0,i;
 
     longueur=longueur_entier(entrer);
@@ -289,67 +278,4 @@ char* convertir_entier_chaine(int entrer)
 
     return sortie;
 }
-
-double racine_carre(double nombre)
-{
-int i;
-double valeur=nombre;
-    for(i=0;i<16;i++)
-        {if(valeur!=0)
-            {valeur=((valeur*valeur)+nombre)/(2*valeur);}
-        else
-            {valeur=0;}
-        }
-return valeur;
-}
-
-double cosinus(double x)
-{double somme,xcarre,valeur;
-  long i,compteur;
-
-	 x=modulo(x, 2*PI);
-	 somme = 1;
-	 xcarre = x*x;
-	 valeur = 1;
-	 i = 1;
-    compteur=0;
-	do
-	{
-    valeur=-(valeur*xcarre)/(i*(i+1));
-    somme=somme+valeur;
-    i+=2;
-    compteur++;
-	}
-	while(compteur<31);
-
-	return somme;
-}
-
-double modulo(double x, double diviseur)
-{   double sommeultat;
-sommeultat=x-diviseur*((long)(x/diviseur));
-	return sommeultat;
-}
-
-
-double exponentiel(double entre)
-{
-
-// a faire //BUGGER
-	double somme = 1;
-	double valeur = 1;
-	double i = 1.0;
-	do
-	{
-		valeur *= entre/i;
-		somme += valeur;
-		i++;
-	} while (fonctionabsolue(valeur)>31.0);
-	return somme;
-}
-
-
-double fonctionabsolue(double nombre){if(nombre<0){nombre=-nombre;}}
-int fonctionabsolue(int nombre){if(nombre<0){nombre=-nombre;}}
-
-
+*/

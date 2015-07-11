@@ -25,3 +25,20 @@
 	<iostream>
 	"complexe.h"
 
+1436563660 source:c:\users\mathieu\github\devellopement_perso\complexe.cpp
+	"include.h"
+
+1436563808 c:\users\mathieu\github\devellopement_perso\complexe.h
+	"include.h"
+
+1436562716 source:c:\users\mathieu\github\devellopement_perso\main.cpp
+	"include.h"
+
+1436562716 c:\users\mathieu\github\devellopement_perso\include.h
+	<stdio.h>
+	<stdlib.h>
+	<cstdlib>
+	<iostream>
+	"complexe.h"
+	"complexe.h"
+

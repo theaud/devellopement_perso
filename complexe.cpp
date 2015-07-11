@@ -1,6 +1,4 @@
-#include <iostream> // pour les surcharges des operateurs d'E/S
-
-#include "complexe.h"
+#include "include.h"
 
 /***************************************************************************************************/
 /***************************************************************************************************/
@@ -16,22 +14,26 @@ bool comparaison(double arg1,double arg2){if(arg1>arg2){return 1;}return 0;}
 
 
 
-
 /***************************************************************************************************/
 /***************************************************************************************************/
 /************************                 Constructeur                 *****************************/
 /***************************************************************************************************/
 /***************************************************************************************************/
 
-Complexe::Complexe(){this->_re=0.0;this->_im=0.0;}
-Complexe::Complexe(double re,double im){this->_re=re;this->_im=im;}
+Complexe::Complexe():_re(0.0),_im(0.0){}
+Complexe::Complexe(const Complexe& arg):_re(arg.getRe()),_im(arg.getIm()){}
+
+//Complexe::Complexe(double re,double im):_re((double)re),_im((double)im){}
+Complexe::Complexe(double re,double im)
+{
+ _re=((double)re);
+ _im=((double)im);
+
+}
 
 
-template<class Type> Complexe::Complexe(Type re, Type im)
-{this->_re=(double)re;this->_im=(double)im;}
-
-// constructeur par recopie,l’objet source est protégé par const
-Complexe::Complexe(const Complexe &arg){this->_re=arg.getRe();this->_im=arg.getIm();}
+Complexe::Complexe(int re,int im):_re((double)re),_im((double)im){}
+Complexe::Complexe(float re,float im):_re((double)re),_im((double)im){}
 
 
 /***************************************************************************************************/
@@ -46,15 +48,8 @@ Complexe::operator int()       {return (int)   _re; }
 Complexe::operator float()     {return (float) _re; }
 Complexe::operator long()      {return (long)  _re; }
 
-// operateur + - * /
-Complexe Complexe::operator + (Complexe &Arg){ _re =_re +Arg._re; _im =_im + Arg._im;return *this;}
-Complexe Complexe::operator - (Complexe &Arg){_re = _re - Arg._re;_im = _im - Arg._im;return *this;}
-Complexe Complexe::operator * (Complexe &Arg){_re = (_re*Arg._re)-(_im*Arg._im);_im = Arg._re*_im + _re*Arg._im;return *this;}
-Complexe Complexe::operator / (Complexe &Arg){_re =_re*Arg._re+_im*Arg._re/(_im*_im+Arg._im*Arg._im);
-        _im =Arg._re*_im-_re*Arg._im/(_im*_im+Arg._im*Arg._im);return *this; }
 
-// operateur =
-Complexe Complexe::operator = (const Complexe & Arg ){ _re = Arg._re; _im = Arg . _im ;return  * this ; }
+
 
 /***************************************************************************************************/
 // operateur <<
